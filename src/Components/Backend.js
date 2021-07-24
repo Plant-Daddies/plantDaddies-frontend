@@ -1,5 +1,4 @@
 import React from 'react'
-import Plant from '../../../plantDaddies-backend/Controllers/Plants'
 
 const Backend = () => {
     return (
