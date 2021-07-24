@@ -1,22 +1,28 @@
-import './App.css';
-import Plant from './Components/Plants/Plant'
-import PlantDetails from './Components/Plants/PlantDetails';
+import "./App.css";
+import Plant from "./Components/Plants/Plant";
+import PlantDetails from "./Components/Plants/PlantDetails";
 import { BrowserRouter as Router } from "react-router-dom";
-import Backend from './Components/Backend'
-import axios from 'axios'
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
+import Backend from "./Components/Backend";
 
 function App() {
-  // pass plants into state
-  axios.get(`http://localhost:4000/plants/index`)
-  .then(res => console.log(res))
+  const [plantData, setPlantData] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:4000/plants/index`)
+      .then((res) => res.json())
+      .then((data) => setPlantData(data));
+  }, []);
 
   return (
     <div className="App">
-      <h1>Plant App</h1>    
-      <Plant  />
-      <PlantDetails/>
+      <h1>Plant App</h1>
+      <Plant plants={plantData} />
+      <PlantDetails />
       <Backend />
-      </div>
+    </div>
   );
 }
 
