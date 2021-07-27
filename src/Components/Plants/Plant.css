@@ -1,0 +1,10 @@
+#plantList{
+    list-style: none;
+}
+#plantCard{
+    width: 18rem;
+}
+img{
+    height:auto;
+    width:200px;
+}

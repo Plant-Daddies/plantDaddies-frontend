@@ -18,10 +18,14 @@ function App() {
 
   return (
     <div className="App">
+      <div>
       <h1>Plant App</h1>
+        <PlantDetails />
+        <Backend />
+      </div>
+      
       <Plant plants={plantData} />
-      <PlantDetails />
-      <Backend />
+      
     </div>
   );
 }
