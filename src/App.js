@@ -1,11 +1,13 @@
 import "./App.css";
 import Plant from "./Components/Plants/Plant";
 import PlantDetails from "./Components/Plants/PlantDetails";
-import { BrowserRouter as Router } from "react-router-dom";
-import axios from "axios";
+import Nav from './Components/Nav/Nav'
+//import { BrowserRouter as Router } from "react-router-dom";
+//import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import Backend from "./Components/Backend";
+
 
 function App() {
   const [plantData, setPlantData] = useState([]);
@@ -18,11 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-      <h1>Plant App</h1>
+      <Nav>
+
         <PlantDetails />
+        
         <Backend />
-      </div>
+      </Nav>
       
       <Plant plants={plantData} />
       
