@@ -1,12 +1,15 @@
 import "./App.css";
 import Plant from "./Components/Plants/Plant";
-import PlantDetails from "./Components/Plants/PlantDetails";
-import Nav from './Components/Nav/Nav'
-//import { BrowserRouter as Router } from "react-router-dom";
-//import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
-import Backend from "./Components/Backend";
+// import PlantDetails from "./Components/Plants/PlantDetails";
+import { BrowserRouter as Router } from "react-router-dom";
+import axios from "axios";
+
+import { useState, useEffect } from "react";
+import Backend from "./Components/Plants/Backend";
+import LoginForm from "./Components/Plants/LoginForm";
+import NewPlant from "./Components/Plants/NewPlant";
+import {Route, Link} from 'react-router-dom'
+
 
 
 function App() {
@@ -20,15 +23,17 @@ function App() {
 
   return (
     <div className="App">
-      <Nav>
-
-        <PlantDetails />
-        
-        <Backend />
-      </Nav>
-      
-      <Plant plants={plantData} />
-      
+      <Link to="/plants/new/">
+          <nav>New Plant</nav>
+      </Link>
+      <Link to="/">
+          <nav>Home</nav>
+      </Link>
+    <main>
+      <Route exact path="/plants/new/" component={NewPlant} plants={plantData}/>      
+      <Plant plants={plantData}/>
+      <LoginForm />
+    </main>
     </div>
   );
 }
