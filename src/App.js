@@ -29,9 +29,6 @@ function App() {
       <Route exact path="/plants/new/" component={NewPlant} plants={plantData}/>      
       <Plant plants={plantData}/>
       <LoginForm />
-      {/* <PlantDetails /> */}
-      {/* <Backend /> */}
-      {/* <NewPlant /> */}
     </main>
     </div>
   );

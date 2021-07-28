@@ -54,7 +54,7 @@ const NewPlant = () => {
                 <input id="fertilizer" type="fertilizer" onChange={handleChange} value={newPlant.fertilizer}/>
                 <label htmlFor="houseplant">House Plant:</label>
                 <input id="houseplant" type="houseplant" onChange={handleChange} value={newPlant.houseplant}/>
-                <button type="submit">send</button>
+                <button type="submit">Send</button>
             </form>
             
         </div>
