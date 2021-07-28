@@ -6,6 +6,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import Backend from "./Components/Backend";
+import EditPlant from "./Components/Plants/EditPlant";
 
 function App() {
   const [plantData, setPlantData] = useState([]);
@@ -22,6 +23,7 @@ function App() {
       <Plant plants={plantData} />
       <PlantDetails />
       <Backend />
+      <EditPlant />
     </div>
   );
 }
