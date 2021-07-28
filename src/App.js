@@ -10,6 +10,8 @@ import LoginForm from "./Components/Plants/LoginForm";
 import NewPlant from "./Components/Plants/NewPlant";
 import {Route, Link} from 'react-router-dom'
 
+
+
 function App() {
   const [plantData, setPlantData] = useState([]);
 
@@ -21,7 +23,6 @@ function App() {
 
   return (
     <div className="App">
-
       <Link to="/plants/new/">
           <nav>New Plant</nav>
       </Link>
@@ -33,7 +34,6 @@ function App() {
       <Plant plants={plantData}/>
       <LoginForm />
     </main>
-
     </div>
   );
 }
