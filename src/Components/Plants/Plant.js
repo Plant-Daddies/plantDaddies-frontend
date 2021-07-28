@@ -1,26 +1,23 @@
-import React from 'react'
-import plants from './plant-data.json'
+import React from "react";
 
+const Plant = (props) => {
+  //   console.log(props);
+  return (
+    <div>
+      <h1>Plants</h1>
+      <div>
+        <ul>
+          {props.plants.map((plant) => (
+            <li>
+              {plant.name}
+              <img src={plant.image}></img>
+              {plant.genus}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-const Plant = () => {
-    return (
-        <div>
-            <h1>Plants</h1>
-            <div>
-                <ul >
-                {plants.map((plant) => (
-                    <li>
-                        <img src={plant.image}/>
-                        {plant.name}
-                        {plant.genus}
-                    </li>
-                    )
-                )}
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-
-export default Plant
+export default Plant;
