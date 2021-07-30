@@ -1,22 +1,27 @@
 import axios from 'axios';
 import React from 'react'
-import {useEffect} from 'react'
-import Plant from './Plant';
+import {useState ,useEffect} from 'react'
 
-const SpecificPlant = ({plants, match}) => {
+const SpecificPlant = ({plants, match, setNewPlant, plantData}) => {
     const plantDetail = plants.filter(plant=> plant.name === match.params.name)[0]
-// console.log(plantDetail)
+    console.log(plantDetail)
 
-    // useEffect( () => {
-    //     axios.get(`http://localhost:4000/plants/show/:${plantDetail}`)
-    //     .then(res=>console.log(res))
-    //     .then(res => res.json(res))
-    //     .then(res=> console.log(res))
-    // },[])
+    // const [deletePlant , setDeletePlant] = useState(plants)
 
+    // const trashPlant =(event) =>{
+    //     event.preventDefault()
+    //     console.log(trashPlant)
+    //     axios.delete(`http://localhost:4000/plants/delete/:id`)
+    //     .then(res =>{
+    //         setDeletePlant(plants)
+    //         console.log(res.data)
+    //     })
+    // }
+    
     return (
         <div>
-            <h1>plant here</h1>
+            <form>
+            <h1>Plant Name</h1>
             <p>Name:<em>{plantDetail.name}</em></p>
             <p>Genus:<em>{plantDetail.genus}</em></p>
             <p>Timer:<em>{plantDetail.timer}</em></p>
@@ -27,6 +32,9 @@ const SpecificPlant = ({plants, match}) => {
             <p>Notes:<em>{plantDetail.notes}</em></p>
             <p>Fertilizer:<em>{plantDetail.fertilizer}</em></p>
             <p>Able to be a house plant?:<em>{plantDetail.houseplant.toString()}</em></p>
+            {/* <button onClick={()=> trashPlant('deletePlant')}>Delete</button> */}
+            </form>
+
       </div>
     )
 }
