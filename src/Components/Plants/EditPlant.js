@@ -2,28 +2,24 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
-const EditPlant = () => {
+const EditPlant = ({plants, match, setPlantData}) => {
+    
 
-    const initialState ={
-        name: '',
-        genus: '',
-        timer: '',
-        zone: '',
-        water: '',
-        image:'',
-        lightRequired: '',
-        notes: '',
-        fertilizer: '',
-        houseplant: ''
-    }
-    const [editPlant, setEditPlant] = useState(initialState)
+    let id = match.params.id
+
+    let currentPlant = plants.filter((plant) => {if (plant._id === id) {return plant}
+    })[0]
+    console.log(currentPlant)
+
+    const [editPlant, setEditPlant] = useState(currentPlant)
 
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(editPlant)
-        axios.post(`http://localhost:4000/plants/edit`, {...editPlant, houseplant: editPlant.houseplant === "false" ? false:true})
+        axios.put(`http://localhost:4000/plants/edit/${id}`, {...editPlant})
         .then(res => {
-          setEditPlant(res.data)
+          setEditPlant(res.data.plant)
+          setPlantData(res.data.plants)
           console.log(res.data)
         })
 
@@ -54,7 +50,7 @@ const EditPlant = () => {
                 <input id="fertilizer" type="fertilizer" onChange={handleChange} value={editPlant.fertilizer}/>
                 <label htmlFor="houseplant">House Plant:</label>
                 <input id="houseplant" type="houseplant" onChange={handleChange} value={editPlant.houseplant}/>
-                <button type="submit">save</button>
+                <button type="submit">Save</button>
             </form>
 
         </div>
