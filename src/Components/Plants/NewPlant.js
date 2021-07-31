@@ -24,6 +24,7 @@ const NewPlant = () => {
         axios.post(`http://localhost:4000/plants/new`, {...newPlant, houseplant: newPlant.houseplant === "false" ? false : true})
         .then(res => {
           setNewPlant(res.data)
+          
           console.log(res.data)
         })
 

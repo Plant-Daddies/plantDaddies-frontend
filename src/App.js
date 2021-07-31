@@ -28,16 +28,9 @@ function App() {
       </Link>
     <main>      
       <Route exact path="/" render={()=><Plant plants={plantData}/>}    /> 
-      <Route exact path="/plants/new/" render={() => <NewPlant plants={plantData}/>}/>
+      <Route exact path="/plants/new/" render={() => <NewPlant plants={plantData} />}/>
       <Route exact path="/plants/show/:name" render={routerProps => <SpecificPlant match={routerProps.match} plants={plantData} setNewPlant={setPlantData}/>}/>
       <Route exact path="/plants/edit/:id" render={routerProps => <EditPlant match={routerProps.match} plants={plantData} setPlantData={setPlantData} />}/>
-      {/* <Route exact path={`/plants/:name`} 
-      render={routerProps =>
-      <SpecificPlant setPlantData={setPlantData} 
-      match={routerProps.match}
-      plantdata={plantData}
-      />}
-      /> */}
       {/* <LoginForm /> */}
     </main>
     </div>
