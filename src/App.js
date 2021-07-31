@@ -1,16 +1,13 @@
 import "./App.css";
 import Plant from "./Components/Plants/Plant";
-// import PlantDetails from "./Components/Plants/PlantDetails";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
-
 import { useState, useEffect } from "react";
-import Backend from "./Components/Plants/Backend";
-import LoginForm from "./Components/Plants/LoginForm";
+// import LoginForm from "./Components/Plants/LoginForm";
 import NewPlant from "./Components/Plants/NewPlant";
 import {Route, Link} from 'react-router-dom'
-
-
+import SpecificPlant from "./Components/Plants/SpecificPlant";
+import EditPlant from "./Components/Plants/EditPlant";
 
 function App() {
   const [plantData, setPlantData] = useState([]);
@@ -29,10 +26,19 @@ function App() {
       <Link to="/">
           <nav>Home</nav>
       </Link>
-    <main>
-      <Route exact path="/plants/new/" component={NewPlant} plants={plantData}/>      
-      <Plant plants={plantData}/>
-      <LoginForm />
+    <main>      
+      <Route exact path="/" render={()=><Plant plants={plantData}/>}    /> 
+      <Route exact path="/plants/new/" render={() => <NewPlant plants={plantData}/>}/>
+      <Route exact path="/plants/show/:name" render={routerProps => <SpecificPlant match={routerProps.match} plants={plantData} setNewPlant={setPlantData}/>}/>
+      <Route exact path="/plants/edit/:id" render={routerProps => <EditPlant match={routerProps.match} plants={plantData} />}/>
+      {/* <Route exact path={`/plants/:name`} 
+      render={routerProps =>
+      <SpecificPlant setPlantData={setPlantData} 
+      match={routerProps.match}
+      plantdata={plantData}
+      />}
+      /> */}
+      {/* <LoginForm /> */}
     </main>
     </div>
   );
