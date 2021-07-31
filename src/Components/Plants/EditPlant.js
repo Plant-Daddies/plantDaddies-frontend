@@ -4,6 +4,8 @@ import axios from 'axios'
 
 const EditPlant = () => {
 
+    let id = "61048f771675c80b2927e02e"
+
     const initialState ={
         name: '',
         genus: '',
@@ -21,7 +23,7 @@ const EditPlant = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(editPlant)
-        axios.post(`http://localhost:4000/plants/edit`, {...editPlant, houseplant: editPlant.houseplant === "false" ? false:true})
+        axios.put(`http://localhost:4000/plants/edit/${id}`, {...editPlant, houseplant: editPlant.houseplant === "false" ? false:true})
         .then(res => {
           setEditPlant(res.data)
           console.log(res.data)
@@ -54,7 +56,7 @@ const EditPlant = () => {
                 <input id="fertilizer" type="fertilizer" onChange={handleChange} value={editPlant.fertilizer}/>
                 <label htmlFor="houseplant">House Plant:</label>
                 <input id="houseplant" type="houseplant" onChange={handleChange} value={editPlant.houseplant}/>
-                <button type="submit">save</button>
+                <button type="submit">Save</button>
             </form>
 
         </div>
