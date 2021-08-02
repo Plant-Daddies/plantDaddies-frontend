@@ -101,6 +101,7 @@ const EditPlant = ({ plants, match, setPlantData }) => {
                 
             </div>
         </div>
+
   );
 };
 
