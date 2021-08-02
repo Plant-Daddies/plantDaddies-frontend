@@ -1,6 +1,6 @@
 #plantList{
     margin: 30px auto;
-    width: 75%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -8,11 +8,15 @@
 }
 #plantCard{
     width: 20rem;
-    border:4px solid rgb(2, 39, 9);
+    border: 5px solid rgb(0, 112, 19);
     border-radius: 10px;
-    margin:auto 40px;
+    margin-right: 40px;
     padding:0;
 }
 img{
     height: 300px;
+}
+
+img:hover{
+    border: 5px solid rgb(0, 112, 19);
 }
