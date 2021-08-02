@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+body{
+  background-image: url('./Components/Nav/plantbkg.jpeg');
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
