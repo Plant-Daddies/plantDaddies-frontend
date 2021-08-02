@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +31,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+nav{
+  padding: 10px;
+}
+.last{
+  float: right;
+}
+.link{
+  color:rgb(19, 129, 19);
+  text-decoration: none;
+}
+#link2:hover{
+  color:whitesmoke;
+  text-decoration: none;
+}
+.link:hover{
+  color:whitesmoke;
+  text-decoration: none;
 }

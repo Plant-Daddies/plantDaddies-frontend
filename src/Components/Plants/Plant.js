@@ -1,8 +1,8 @@
 import React from "react";
 import './Plant.css'
-// import Card from 'react-bootstrap/Card'
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {Link} from 'react-router-dom'
+
 const Plant = (props) => {
   return (
     <div id="plantList">

@@ -1,6 +1,8 @@
 import React from 'react'
 import {useState} from 'react'
 import axios from 'axios'
+import './new.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const NewPlant = () => {
 
@@ -35,25 +37,43 @@ const NewPlant = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name:</label>
-                <input id="name" type="name" onChange={handleChange} value={newPlant.name}/>
-                <label htmlFor="genus">Genus:</label>
-                <input id="genus" type="genus" onChange={handleChange} value={newPlant.genus}/>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label htmlFor="name">Name:</label>
+                        <input id="name" type="name" onChange={handleChange} value={newPlant.name}/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label htmlFor="genus">Genus:</label>
+                        <input id="genus" type="genus" onChange={handleChange} value={newPlant.genus}/>
+                    </div>
+                </div>
+               
+
+                
+
                 <label htmlFor="timer">Timer:</label>
                 <input id="timer" type="timer" onChange={handleChange} value={newPlant.timer}/>
+
                 <label htmlFor="zone">Zone:</label>
                 <input id="zone" type="zone" onChange={handleChange} value={newPlant.zone}/>
+
                 <label htmlFor="water">Water:</label>
                 <input id="water" type="water" onChange={handleChange} value={newPlant.water}/>
+
                 <label htmlFor="image">Image:</label>
                 <input id="image" type="texr" alt={newPlant.name} onChange={handleChange} value={newPlant.image}/>
+
                 <label htmlFor="lightRequired">Light Required:</label>
                 <input id="lightRequired" type="lightRequired" onChange={handleChange} value={newPlant.lightRequired}/>
+
                 <label htmlFor="notes">Notes:</label>
                 <input id="notes" type="notes" onChange={handleChange} value={newPlant.notes}/>
                 <label htmlFor="fertilizer">Fertilizer:</label>
+
                 <input id="fertilizer" type="fertilizer" onChange={handleChange} value={newPlant.fertilizer}/>
                 <label htmlFor="houseplant">House Plant:</label>
+
                 <input id="houseplant" type="houseplant" onChange={handleChange} value={newPlant.houseplant}/>
                 <button type="submit">Send</button>
             </form>

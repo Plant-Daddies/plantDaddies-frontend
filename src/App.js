@@ -1,9 +1,8 @@
 import "./App.css";
 import Plant from "./Components/Plants/Plant";
-import { BrowserRouter as Router } from "react-router-dom";
-import axios from "axios";
 import { useState, useEffect } from "react";
-// import LoginForm from "./Components/Plants/LoginForm";
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import NewPlant from "./Components/Plants/NewPlant";
 import {Route, Link} from 'react-router-dom'
 import SpecificPlant from "./Components/Plants/SpecificPlant";
@@ -20,12 +19,14 @@ function App() {
 
   return (
     <div className="App">
-      <Link to="/plants/new/">
-          <nav>New Plant</nav>
-      </Link>
-      <Link to="/">
-          <nav>Home</nav>
-      </Link>
+
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Plant Daddies</a>
+        <button class='btn btn-outline-success' id='link2' ><Link to="/plants/new/" class='link'> New Plant </Link></button>
+        
+    
+    </nav>
+      
     <main>      
       <Route exact path="/" render={()=><Plant plants={plantData}/>}    /> 
       <Route exact path="/plants/new/" render={() => <NewPlant plants={plantData} />}/>

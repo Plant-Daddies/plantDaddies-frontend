@@ -1,8 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import axios from "axios";
-import {Redirect} from 'react-router-dom'
 import {useHistory} from 'react-router-dom'
+import './edit.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const EditPlant = ({ plants, match, setPlantData }) => {
   let history = useHistory()
