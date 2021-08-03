@@ -29,9 +29,11 @@ PlantDaddy is the perfect app(le) for any aspiring gardener. This top of the vin
 
 ### stretch goals
 - N/A
+- ToDo list
 
 ### roadblocks
 - Delete Button - page would not refresh after deleting a plant
+- Lost a team member halfway through
 
 ### final thoughts
 - Groups that are made ideally should be in the same time zone.
