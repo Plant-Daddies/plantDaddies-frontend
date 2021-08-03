@@ -5,8 +5,8 @@
 PlantDaddy is the perfect app(le) for any aspiring gardener. This top of the vine website allows it's users to log a plant into our database, and customize its pear. With added features such as a timer telling you when should water your plant and an easy to read layout. PlantDaddy is the site for you
 
 ### Wireframes
-	![screenshot of main page](./img/indexScreenshot.png)	
-    ![screenshot of individual flower](./img/showScreenshot.png)
+	[screenshot of main page](./img/indexScreenshot.png)	
+    [screenshot of individual flower](./img/showScreenshot.png)
 
 ### Technology
 
@@ -20,20 +20,19 @@ PlantDaddy is the perfect app(le) for any aspiring gardener. This top of the vin
 - Heroku
 - Cors
 
-### mvp
+### MVP
 - User should be able to Create a plant
 - User should be able to Read a plant
 - User should be able to Update a plant
 - User should be able to Delete a plant
 - Master git work flow
 
-### stretch goals
-- N/A
+### Stretch Goals
 - ToDo list
 
-### roadblocks
+### Roadblocks
 - Delete Button - page would not refresh after deleting a plant
 - Lost a team member halfway through
 
-### final thoughts
+### Final Thoughts
 - Groups that are made ideally should be in the same time zone.
