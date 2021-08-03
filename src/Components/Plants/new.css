@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+h1{
+    font-family: 'Aclonica', sans-serif;
+   color: #043f0d;
+}
 #newForm{
     margin:60px auto;
     width: 75%;
