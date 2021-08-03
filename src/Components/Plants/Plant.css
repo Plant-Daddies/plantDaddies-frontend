@@ -1,0 +1,22 @@
+#plantList{
+    margin: 30px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    grid-auto-rows: minmax(100px, auto);
+}
+#plantCard{
+    width: 20rem;
+    border: 5px solid rgb(0, 112, 19);
+    border-radius: 10px;
+    margin-right: 40px;
+    padding:0;
+}
+img{
+    height: 300px;
+}
+
+img:hover{
+    border: 5px solid rgb(0, 112, 19);
+}
