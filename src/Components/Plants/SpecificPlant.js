@@ -1,41 +1,44 @@
-import axios from 'axios';
 import React from 'react'
-import {useState ,useEffect} from 'react'
+import './specific.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const SpecificPlant = ({plants, match, setNewPlant, plantData}) => {
     const plantDetail = plants.filter(plant=> plant.name === match.params.name)[0]
-    console.log(plantDetail)
-
-    // const [deletePlant , setDeletePlant] = useState(plants)
-
-    // const trashPlant =(event) =>{
-    //     event.preventDefault()
-    //     console.log(trashPlant)
-    //     axios.delete(`http://localhost:4000/plants/delete/:id`)
-    //     .then(res =>{
-    //         setDeletePlant(plants)
-    //         console.log(res.data)
-    //     })
-    // }
     
     return (
-        <div>
-            <form>
-            <h1>Plant Name</h1>
-            <p>Name:<em>{plantDetail.name}</em></p>
-            <p>Genus:<em>{plantDetail.genus}</em></p>
-            <p>Timer:<em>{plantDetail.timer}</em></p>
-            <p>Zone:<em>{plantDetail.zone}</em></p>
-            <p>Water:<em>{plantDetail.water}</em></p>
-            <p>Image:<img src={plantDetail.image} alt={plantDetail.name}/></p>
-            <p>LightRequired:<em>{plantDetail.lightRequired}</em></p>
-            <p>Notes:<em>{plantDetail.notes}</em></p>
-            <p>Fertilizer:<em>{plantDetail.fertilizer}</em></p>
-            <p>Able to be a house plant?:<em>{plantDetail.houseplant.toString()}</em></p>
-            {/* <button onClick={()=> trashPlant('deletePlant')}>Delete</button> */}
-            </form>
+        <div class="specified">
+            
+            <h1 id='plantHead'>The {plantDetail.name}</h1>
+         <form>
+            <div >
+                <div class="card" id='card'>
+                    <img class="card-img-top" src={plantDetail.image} alt={plantDetail.name} />
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Genus: {plantDetail.genus}</li>
+                        <li class="list-group-item">Native Zone: {plantDetail.zone}</li>
+                    </ul>
+                    <div class="card-footer">
+                        <small class="text-muted">Is your {plantDetail.name} a House Plant? {plantDetail.houseplant.toString()}</small>
+                    </div>
+                </div>
 
-      </div>
+                <div class="card mb-3" id='card' >
+                    <div class="card-header">Care Information</div>
+                    <div class="card-body text-dark">  
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">How much water does {plantDetail.name} need?:{plantDetail.water}</li>
+                        <li class="list-group-item">How much light does {plantDetail.name} need?:{plantDetail.lightRequired}</li>
+                        <li class="list-group-item">How much fertilizer does {plantDetail.name} need?:{plantDetail.fertilizer}</li>
+                        <li class="list-group-item">Extra Notes:{plantDetail.notes}</li>
+                    </ul>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">you have {(plantDetail.timer/86400)} days until {plantDetail.name} needs water</small>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
     )
 }
 

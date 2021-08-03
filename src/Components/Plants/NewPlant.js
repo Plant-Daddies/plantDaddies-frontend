@@ -67,8 +67,8 @@ const NewPlant = () => {
                         </div>
                     </div>
 
-                    <div class='group'>
-                        <input id="houseplant" placeholder="Is this a Houseplant?" class="form-control" type="text" onChange={handleChange} value={newPlant.houseplant}/>
+                    <div class='group'> 
+                        <input id="notes" placeholder="Extra Notes" class="form-control" type="text" onChange={handleChange} value={newPlant.notes}/>
                     </div>
 
                     <div class='row'>
@@ -81,7 +81,7 @@ const NewPlant = () => {
                         </div>
 
                         <div class="col">
-                            <input id="notes" placeholder="Extra Notes" class="form-control" type="text" onChange={handleChange} value={newPlant.notes}/>
+                            <input id="houseplant" placeholder="Is this a Houseplant?" class="form-control" type="text" onChange={handleChange} value={newPlant.houseplant}/>
                         </div>
                         
                     </div>
