@@ -9,7 +9,7 @@ const Plant = (props) => {
       
           {props.plants.map((plant) => (
             <div class="card" id='plantCard' key={plant.name}>
-                <Link to={`/plants/show/${plant.name}`}><img class="card-img-top" alt="Card cap"src={plant.image}></img></Link >
+                <Link to={`/plants/show/${plant.name}`}><img id='pic'class="card-img-top" alt="Card cap"src={plant.image} ></img></Link >
                 <Link to={{pathname:`/plants/edit/${plant._id}`, state:plant}} class='btn btn-success'>Update {plant.name}</Link >
                
               <div lass="card-body">
