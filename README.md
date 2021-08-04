@@ -8,7 +8,7 @@ PlantDaddy is the perfect app(le) for any aspiring gardener. This top of the vin
 ### Wireframes
 ![IMG_5955](https://user-images.githubusercontent.com/83625073/128268660-3d18c8ef-37ca-45af-b51e-05f425954d6d.jpg)
 ![screenshot of main page](./img/indexScreenshot.png)	
-![screenshot of individual flower](./img/showScreenshot.png)
+
 
 ### Technology
 
