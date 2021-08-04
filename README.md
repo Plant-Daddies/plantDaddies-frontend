@@ -1,3 +1,4 @@
+
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # PlantDaddy
@@ -5,8 +6,9 @@
 PlantDaddy is the perfect app(le) for any aspiring gardener. This top of the vine website allows it's users to log a plant into our database, and customize its pear. With added features such as a timer telling you when should water your plant and an easy to read layout. PlantDaddy is the site for you
 
 ### Wireframes
-	![screenshot of main page](./img/indexScreenshot.png)	
-    ![screenshot of individual flower](./img/showScreenshot.png)
+![IMG_5955](https://user-images.githubusercontent.com/83625073/128268660-3d18c8ef-37ca-45af-b51e-05f425954d6d.jpg)
+![screenshot of main page](./img/indexScreenshot.png)	
+![screenshot of individual flower](./img/showScreenshot.png)
 
 ### Technology
 
