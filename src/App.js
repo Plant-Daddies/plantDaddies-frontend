@@ -20,7 +20,7 @@ function App() {
     <div className="App">
 
       <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Plant Daddies</a>
+        <a class="navbar-brand" href="/" class='logo'><h3>Plant Daddies </h3></a>
         <button class='btn btn-outline-success' id='link2' ><Link to="/plants/new/" class='link'> New Plant </Link></button>
         
     
